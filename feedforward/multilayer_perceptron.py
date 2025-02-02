@@ -315,4 +315,8 @@ def train(model, X_train, y_train, X_valid, num_epochs, learning_rate=0.1):
 np.random.seed(123) # for the training set shuffling
 epoch_loss, epoch_train_acc, epoch_valid_acc = train(model, X_train, y_train, X_valid, num_epochs=50, learning_rate=0.1)
 
+# %% Now testing performance on test dataset
+test_mse, test_acc = compute_mse_and_acc(model, X_test, y_test)
+print(f'Test accuracy: {test_acc*100:.2f}%')
+
 # %%
